@@ -1,6 +1,7 @@
 package ru.selenium.courses;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
 
@@ -8,7 +9,7 @@ import java.util.List;
 
 import static java.lang.Thread.sleep;
 
-public class LeftMenuCheckTest extends AuthorisationTest {
+public class LeftMenuCheckTest extends SetUp {
     public WebElement h1;
     public List<WebElement> elementsMenu, submenuElements;
 
@@ -16,6 +17,7 @@ public class LeftMenuCheckTest extends AuthorisationTest {
         h1 = driver.findElementByCssSelector("h1");
         Assert.assertTrue(h1.isEnabled());
     }
+
     @Test
     public void LeftMenuCheck() throws InterruptedException {
         checkAuthAdmin();
