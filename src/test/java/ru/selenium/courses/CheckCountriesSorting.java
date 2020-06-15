@@ -18,7 +18,7 @@ public class CheckCountriesSorting extends SetUp {
 //    б) для тех стран, у которых количество зон отлично от нуля -- открыть страницу этой страны и там проверить, что зоны расположены в алфавитном порядке
 
     @Test
-    public void TestCountryList() {
+    public void testCountryList() {
         checkAuthAdmin();
         driver.get("http://localhost/litecart/admin/?app=countries&doc=countries");
 
@@ -33,7 +33,7 @@ public class CheckCountriesSorting extends SetUp {
     }
 
     @Test
-    public void TestCountryListNotZero() {
+    public void testCountryListNotZero() {
         checkAuthAdmin();
         driver.get("http://localhost/litecart/admin/?app=countries&doc=countries");
 
@@ -58,7 +58,7 @@ public class CheckCountriesSorting extends SetUp {
 //    зайти в каждую из стран и проверить, что зоны расположены в алфавитном порядке
 
     @Test
-    public void TestCountryGeoZones() {
+    public void testCountryGeoZones() {
         checkAuthAdmin();
         driver.get("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
         int countriesNumber = driver.findElements(By.xpath("//tr[@class='row']//td[3]")).size();

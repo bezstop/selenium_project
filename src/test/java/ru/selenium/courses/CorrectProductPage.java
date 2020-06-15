@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class CorrectProductPage extends SetUp {
     @Test
-    public void TestCountryList() {
+    public void testCountryList() {
         driver.get("http://localhost/litecart/en/");
 
         //Внешняя страница товара
