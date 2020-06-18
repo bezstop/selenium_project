@@ -26,7 +26,7 @@ public class SetUp {
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "/Users/QA/Downloads/chromedriver.exe");
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 1000000);
+        wait = new WebDriverWait(driver, 10);
     }
 
     @After
